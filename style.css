@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#header{
+    text-align: center;
+}
+
+form label{
+    font-weight: 500;
+}
+#leetcode-label, #gfg-label{
+    font-weight: 400;
+}
+
+main{
+    margin: 30px auto 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    border: 1px solid black;
+    border-radius: 15px;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 15px;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.array-size, .min-max{
+    margin-top: 5px;
+}
+
+.min-max{
+    display: flex;
+    gap: 30px;
+}
+
+.input-unique, .input-sort, .radio-div{
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+}
+
+.format .radio-buttons{
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+#result-container{
+    display: none;
+    text-align: center;
+    min-width: 400px;
+    max-width: 80%;
+    word-wrap: break-word;
+    margin-bottom: 50px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input[type="number"]{
+    width: 150px;
+    border-radius: 3px;
+    padding: 5px 0;
+    padding-left: 10px;
+    border: 1px solid black;
+}
+
+#leetcode-name{
+    color: #ffa116;
+}
+#gfg-name{
+    color: #2f8d46;
+}
+/* Disables the buttons that show up when you hover over the input field */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

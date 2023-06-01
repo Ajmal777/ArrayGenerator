@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="header">Array Generator</h1>
+    </header>
+    <main>
+        <div class="container">
+            <form action="" method="post" id="form">
+                <div class="input input-size">
+                    <label for="size">Set the size of the array you want: </label>
+                    <div class="array-size">
+                        <input id="size" type="number" min="1" max="100" name="size" placeholder="max: 100">
+                    </div>
+                </div>
+                <div id="range" class="input input-range">
+                    <label for="range">Set the range of numbers: </label>
+                    <div class="min-max">
+                        <input type="number" name="min" id="min" min="-2147483648" max="2147483647" placeholder="min">
+                        <input type="number" name="max" id="max" min="-2147483648" max="2147483647" placeholder="max">
+                    </div>
+                </div>
+                <div class="input input-unique">
+                    <label for="unique">Should all numbers be unique?</label>
+                    <input type="checkbox" name="unique" id="unique">
+                </div>
+                <div class="input input-sort">
+                    <label for="sort">Should it be sorted?</label>
+                    <input type="checkbox" name="sort" id="sort">
+                </div>
+                <div class="format">
+                    <label for="platform">In which format do you want the array to be in?</label>
+                    <div class="input radio-buttons">
+                        <div class="radio-div leetcode">
+                            <label id="leetcode-label" for="leetcode"><span id="leetcode-name">LeetCode</span> format</label>
+                            <input type="radio" name="platform" id="leetcode" checked>
+                        </div>
+                        <div class="radio-div gfg">
+                            <label id="gfg-label" for="gfg"><span id="gfg-name">GeeksForGeeks</span> format</label>
+                            <input type="radio" name="platform" id="gfg">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Generate</button>
+            </form>
+        </div>
+    </main>
+    <section>
+        <div id="result-container">
+            <p id="result"></p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
