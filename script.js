@@ -1,3 +1,4 @@
+
 document.getElementById('form').addEventListener('submit', (data)=>{
     data.preventDefault();
 
@@ -5,7 +6,7 @@ document.getElementById('form').addEventListener('submit', (data)=>{
     const size = Number(document.getElementById('size').value);
     const min = Number(document.getElementById('min').value);
     const max = Number(document.getElementById('max').value);
-
+    
     //other options
     const sort = document.getElementById('sort').checked;
     const unique = document.getElementById('unique').checked;
@@ -13,20 +14,25 @@ document.getElementById('form').addEventListener('submit', (data)=>{
     //platform
     const leetcode = document.getElementById('leetcode').checked;
     const gfg = document.getElementById('gfg').checked;
-
-    //check edge case
-    if(unique){
+    
+    //handle edge cases
+    if(min > max){
+        displayResultBlock();
+        document.getElementById('result').innerHTML = "Invalid Input";
+        return;
+    }
+    else if(unique){
         if(max-(min-1) < size){
+            displayResultBlock();
             document.getElementById('result').innerHTML = "Invalid Input";
             return;
         }
     }
 
-    //result container
-    document.getElementById('result-container').style.display = 'block';
-
     //generate array
     const array = generateArray(size, min, max, sort, unique);
+    
+    displayResultBlock();
 
     //print array
     const result = document.getElementById('result');
@@ -36,8 +42,18 @@ document.getElementById('form').addEventListener('submit', (data)=>{
     else{
         result.innerHTML = "[" + array + "]";
     }
-
+    
 });
+
+document.getElementById('result-container').addEventListener('click', ()=>{
+    const text = document.getElementById('result').innerText;
+    navigator.clipboard.writeText(text);
+    console.log(text);
+})
+
+function displayResultBlock(){
+    document.getElementById('result-container').style.display = 'block';
+}
 
 let set;
 function generateArray(size, min, max, sort, unique){

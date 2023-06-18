@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono&display=swap');
 
 *{
     margin: 0;
@@ -6,8 +6,40 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    background-color: #F0F0F0;
+}
+
+.container, #result-container{
+    background-color: #F6F6F6;
+    box-shadow: 0px 5px 25px darkgrey ;
+}
+
+#submit-btn{
+    width: 120px;
+    height: 30px;
+    align-self: center;
+    border-radius: 5px;
+    background-color: #2192FF;
+    color: white;
+    border: 1px solid transparent;
+    box-shadow: 0px 1px 5px #2192FF;
+    transform: scale(1.1);
+    transition: transform 0.1s ease;
+}
+#submit-btn:hover{
+    background-color: #0042fb;
+    transition: background-color .05s ease;
+    box-shadow: 0px 1px 5px #0042fb;
+}
+#submit-btn:active{
+    transform: scale(1);
+    transition: transform 0.1s ease;
+}
+
 #header{
     text-align: center;
+    font-weight: 500;
 }
 
 form label{
@@ -24,7 +56,6 @@ main{
     align-items: center;
 }
 .container{
-    border: 1px solid black;
     border-radius: 15px;
 }
 #form{
@@ -62,13 +93,21 @@ section{
 #result-container{
     display: none;
     text-align: center;
+
     min-width: 400px;
     max-width: 80%;
+
     word-wrap: break-word;
+
     margin-bottom: 50px;
-    border: 1px solid black;
     padding: 10px;
     border-radius: 10px;
+}
+#result-container:hover{
+    cursor: pointer;
+}
+#result{
+    font-family: 'Roboto Mono', monospace;
 }
 
 input[type="number"]{
