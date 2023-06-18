@@ -46,6 +46,13 @@ document.getElementById('form').addEventListener('submit', (data)=>{
 });
 
 document.getElementById('result-container').addEventListener('click', ()=>{
+    const copyMsg = document.getElementById('copy-msg');
+    copyMsg.classList.add('show-msg');
+
+    setTimeout(()=>{
+        copyMsg.classList.remove('show-msg');
+    }, 1500);
+
     const text = document.getElementById('result').innerText;
     navigator.clipboard.writeText(text);
     console.log(text);

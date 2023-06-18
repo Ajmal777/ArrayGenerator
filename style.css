@@ -92,6 +92,7 @@ section{
 
 #result-container{
     display: none;
+    position: relative;
     text-align: center;
 
     min-width: 400px;
@@ -103,9 +104,30 @@ section{
     padding: 10px;
     border-radius: 10px;
 }
+
 #result-container:hover{
     cursor: pointer;
 }
+
+#copy-msg{
+    display: none;
+    min-width: 250px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+
+    color: #454545;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 0px 1px 5px #454545c2;
+
+    transform: translate(-50%, -40px);
+}
+
+.show-msg{
+    display: block !important;
+}
+
 #result{
     font-family: 'Roboto Mono', monospace;
 }
